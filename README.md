@@ -1,2 +1,2 @@
 # DailyQuizzes
-Daily Quizzes
+Daily Quizzes for wxd and ysh.
