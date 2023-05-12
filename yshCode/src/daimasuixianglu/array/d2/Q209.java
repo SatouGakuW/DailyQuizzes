@@ -1,4 +1,4 @@
-package daimasuixianglu.d2;
+package daimasuixianglu.array.d2;
 
 public class Q209 {
     public int minSubArrayLen(int target, int[] nums) {

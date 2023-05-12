@@ -1,4 +1,4 @@
-package daimasuixianglu.d1;
+package daimasuixianglu.array.d1;
 
 public class Q27 {
 
