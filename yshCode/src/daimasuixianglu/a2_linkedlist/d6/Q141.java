@@ -1,4 +1,4 @@
-package daimasuixianglu.linkedlist.d6;
+package daimasuixianglu.a2_linkedlist.d6;
 
 public class Q141 {
 

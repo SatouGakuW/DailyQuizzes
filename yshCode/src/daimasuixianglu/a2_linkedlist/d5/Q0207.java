@@ -1,4 +1,4 @@
-package daimasuixianglu.linkedlist.d5;
+package daimasuixianglu.a2_linkedlist.d5;
 
 public class Q0207 {
 

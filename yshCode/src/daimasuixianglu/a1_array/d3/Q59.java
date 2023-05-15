@@ -1,4 +1,4 @@
-package daimasuixianglu.array.d3;
+package daimasuixianglu.a1_array.d3;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package daimasuixianglu.linkedlist.d4;
+package daimasuixianglu.a2_linkedlist.d4;
 
 import java.util.LinkedList;
 import java.util.List;
