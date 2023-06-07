@@ -13,11 +13,13 @@ public class RemovingElements {
     }
     // code here
     public static int rmElements(int[] nums, int val) {
-        int fast, slow = 0;
-        for (fast = 0; fast < nums.length; fast++) {
+        int slow = 0;
+        for (int fast = 0; fast < nums.length; fast++) {
             if (nums[fast] != val) {
                 nums[slow] = nums[fast];
                 slow++;
+//                上面两句也可以合并为
+//                nums[slow++] = nums[fast];
             }
         }
         return slow;
