@@ -9,6 +9,7 @@ public class BinarySearch {
         int ans = binarySearch(nums, target);
         System.out.println(ans);
     }
+
     // code here
     public static int binarySearch(int[] num, int target) {
         int left = 0, right = num.length;
@@ -17,11 +18,9 @@ public class BinarySearch {
             int mid = left + ((right - left) >> 1); // 这种写法不容易溢出
             if (num[mid] > target) {
                 right = mid;
-            }
-            else if (num[mid] < target) {
+            } else if (num[mid] < target) {
                 left = mid + 1;
-            }
-            else {
+            } else {
                 return mid;
             }
         }

@@ -11,6 +11,7 @@ public class RemovingElements {
         int ans = rmElements(nums, val);
         System.out.println(ans);
     }
+
     // code here
     public static int rmElements(int[] nums, int val) {
         int slow = 0;
