@@ -35,9 +35,9 @@ public class MinSubArrayLen {
     public static int swSolution(int target, int[] nums) {
         int sum = 0, result = Integer.MAX_VALUE;
         int i = 0;
-        for (int j = 0; j < nums.length; j++) {
+        for (int j = 0; j < nums.length; j++) {     // j是终点指针
             sum += nums[j];
-            while (sum >= target) {
+            while (sum >= target) {     // sum大的话就要不停缩小窗口长度，所以用的是while
                 int sumL = j - i + 1;
                 result = Math.min(sumL, result);
                 sum -= nums[i++];
