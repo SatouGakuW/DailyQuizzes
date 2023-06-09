@@ -5,8 +5,8 @@ import java.util.Arrays;
 // 输出target对应的数组下标
 public class BinarySearch {
     public static void main(String[] args) {
-        int target = 0;
-        boolean ans = isPerfectSquare(target);
+        int target = 8;
+        int ans = mySqrt(target);
         System.out.println(ans);
     }
 
@@ -92,19 +92,30 @@ public class BinarySearch {
     // LeetCode Q69
     // 一定要加long！！否则大数会溢出！！
     public static int mySqrt(int x) {
-        int left = 0, right = x;
+        int left = 0, right = x + 1;
         int ans = -1;
-        while (left <= right) {
+        while (left < right) {
             int mid = left + ((right - left) >> 1);
             if ((long)mid * mid <= x) {
                 left = mid + 1;
-                ans = mid;
-            }
-            else {
-                right = mid - 1;
+                ans = mid;      // 这个地方注意。。
+            } else if ((long)mid * mid > x) {
+                right = mid;
             }
         }
         return ans;
+
+//        while (left <= right) {
+//            int mid = left + ((right - left) >> 1);
+//            if ((long)mid * mid <= x) {
+//                left = mid + 1;
+//                ans = mid;
+//            }
+//            else {
+//                right = mid - 1;
+//            }
+//        }
+//        return ans;
     }
 
     // LeetCode 367

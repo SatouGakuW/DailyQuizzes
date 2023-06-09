@@ -8,12 +8,12 @@ public class RemovingElements {
         int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
 //        int val = 3;
         int val = 2;
-        int ans = rmElements(nums, val);
+        int ans = removeElement(nums, val);
         System.out.println(ans);
     }
 
     // code here
-    public static int rmElements(int[] nums, int val) {
+    public static int removeElement(int[] nums, int val) {
         int slow = 0;
         for (int fast = 0; fast < nums.length; fast++) {
             if (nums[fast] != val) {
