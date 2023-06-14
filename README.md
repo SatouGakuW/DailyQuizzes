@@ -1,2 +1,3 @@
-# DailyQuizzes
-Daily Quizzes for wxd and ysh.
+# Branch for ysh
+
+ysh pushes here 😁
