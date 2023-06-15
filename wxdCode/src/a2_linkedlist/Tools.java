@@ -1,18 +1,14 @@
 package a2_linkedlist;
 
 public class Tools {
-    public static ListNode initialList(int[] nums, ListNode head) {
-        ListNode tail = head;
+    public static ListNode initialList(int[] nums) {
+        ListNode dummy = new ListNode();
+        ListNode tail = dummy;
         for (int i = 0; i < nums.length; i++) {
-            ListNode tmp = new ListNode(nums[i]);
-            if (i == 0) {
-                head.next = tmp;
-            }
-            tail.next = tmp;
+            tail.next = new ListNode(nums[i]);
             tail = tail.next;
         }
-        head = head.next;
-        return head;
+        return dummy.next;
     }
 
     public static void printList(ListNode head) {
