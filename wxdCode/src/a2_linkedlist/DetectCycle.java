@@ -18,15 +18,16 @@ public class DetectCycle {
 
     public static ListNode solution(ListNode head) {
         ListNode fast = head, slow = head;
-        while (fast != null && fast.next != null && fast.next.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if (fast == slow)
-            {
-                if (fast == head)
-                    return fast;
-                else
-                    return fast.next;
+            if (fast == slow) {
+                ListNode index1 = fast, index2 = head;
+                while (index1 != index2) {
+                    index1 = index1.next;
+                    index2 = index2.next;
+                }
+                return index2;
             }
         }
         return null;

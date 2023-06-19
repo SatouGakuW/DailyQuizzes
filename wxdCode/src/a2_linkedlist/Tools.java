@@ -19,4 +19,14 @@ public class Tools {
         }
         System.out.println();
     }
+
+    public static int listLength(ListNode head) {
+        ListNode curr = new ListNode(0, head);
+        int length = 0;
+        while (curr != null) {
+            length++;
+            curr = curr.next;
+        }
+        return length;
+    }
 }
