@@ -4,10 +4,10 @@ package a3_hashtable;
 public class IsAnagram {
     public static void main(String[] args) {
         String s = "rat", t = "car";
-        System.out.println(solution(s, t));
+        System.out.println(q242(s, t));
     }
 
-    public static boolean solution(String s, String t) {
+    public static boolean q242(String s, String t) {
         int[] alphabet = new int[26];
         for (int i = 0; i < s.length(); i++) {
             int idx = (int) s.charAt(i) - 'a';

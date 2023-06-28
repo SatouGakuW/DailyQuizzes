@@ -7,11 +7,11 @@ public class RemoveNthFromEnd {
         int[] nums = {1,2,3,4,5};
         ListNode head = Tools.initialList(nums);
         int n = 2;
-        head = solution2(head, n);
+        head = q19_s2(head, n);
         Tools.printList(head);
     }
 
-    public static ListNode solution1(ListNode head, int n) {
+    public static ListNode q19_s1(ListNode head, int n) {
         ListNode dummy = new ListNode(0, head);
         ListNode pre = dummy, curr = head;
         int length = 0;
@@ -30,7 +30,7 @@ public class RemoveNthFromEnd {
     }
 
     // 双指针，一快一慢，快指针先走n+1步，然后快慢指针一起移动，直到快指针为null
-    public static ListNode solution2(ListNode head, int n) {
+    public static ListNode q19_s2(ListNode head, int n) {
         ListNode dummyHead = new ListNode(0, head);
         ListNode fast = dummyHead, slow = dummyHead;
         int step = n + 1;

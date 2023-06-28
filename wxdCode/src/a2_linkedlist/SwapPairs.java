@@ -5,11 +5,11 @@ public class SwapPairs {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4};
         ListNode head = Tools.initialList(nums);
-        head = solution(head);
+        head = q24(head);
         Tools.printList(head);
     }
 
-    public static ListNode solution(ListNode head) {
+    public static ListNode q24(ListNode head) {
         ListNode dummyHead = new ListNode(0, head);
         ListNode idx1 = dummyHead, idx2 = idx1.next;
         if (idx2 == null) {

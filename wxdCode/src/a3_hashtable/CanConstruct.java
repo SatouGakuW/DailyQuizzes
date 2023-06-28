@@ -3,10 +3,10 @@ package a3_hashtable;
 public class CanConstruct {
     public static void main(String[] args) {
         String ransomNote = "aa", magazine = "aab";
-        System.out.println(solution(ransomNote, magazine));
+        System.out.println(q383(ransomNote, magazine));
     }
 
-    public static boolean solution(String ransomNote, String magazine) {
+    public static boolean q383(String ransomNote, String magazine) {
         int[] alphabet = new int[26];
         for (int i = 0; i < magazine.length(); i++) {
             int idx = (int) magazine.charAt(i) - 'a';
