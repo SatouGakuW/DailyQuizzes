@@ -14,6 +14,7 @@ public class EvalRPN {
         Stack<Integer> st = new Stack<>();
         for (int i = 0; i < tokens.length; i++) {
             // 碰到数字直接入栈；碰到符号弹出栈顶的两个数做运算，然后将得到的结果压栈。
+            // 先出栈的是运算符右侧的数
             if (tokens[i].equals("+")) {
                 st.push(st.pop() + st.pop());
             } else if (tokens[i].equals("-")) {
