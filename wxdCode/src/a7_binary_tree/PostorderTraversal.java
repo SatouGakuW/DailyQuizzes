@@ -1,6 +1,9 @@
 package a7_binary_tree;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
 
 public class PostorderTraversal {
     public static void main(String[] args) {
