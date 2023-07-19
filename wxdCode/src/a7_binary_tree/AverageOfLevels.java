@@ -12,10 +12,13 @@ public class AverageOfLevels {
         TreeNode node2 = new TreeNode(20, node3, node4);
         TreeNode node1 = new TreeNode(9);
         TreeNode node0 = new TreeNode(3,node1, node2);
-        System.out.println(q637s1(node0));
+        Q637 q637 = new Q637();
+        System.out.println(q637.solution1(node0));
     }
+}
 
-    public static List<Double> q637s1(TreeNode root) {
+class Q637 {
+    public List<Double> solution1(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         List<Double> result = new ArrayList<>();
         if (root != null)
