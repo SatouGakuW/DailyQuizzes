@@ -7,10 +7,13 @@ import java.util.TreeMap;
 public class ConstructMaximumBinaryTree {
     public static void main(String[] args) {
         int[] nums = {3,2,1,6,0,5};
-        q654s1(nums);
+        Q654 q654 = new Q654();
+        q654.solution1(nums);
     }
+}
 
-    public static TreeNode q654s1(int[] nums) {
+class Q654 {
+    public TreeNode solution1(int[] nums) {
         if (nums.length == 0)
             return null;
         if (nums.length == 1) {
@@ -20,7 +23,7 @@ public class ConstructMaximumBinaryTree {
         return findNode(nums, 0, nums.length);
     }
 
-    public static TreeNode findNode(int[] nums, int begin, int end) {
+    public TreeNode findNode(int[] nums, int begin, int end) {
         if (begin >= end)
             return null;
         int max = nums[begin];
@@ -36,4 +39,5 @@ public class ConstructMaximumBinaryTree {
         root.right = findNode(nums, rootIdx + 1, end);
         return root;
     }
+
 }

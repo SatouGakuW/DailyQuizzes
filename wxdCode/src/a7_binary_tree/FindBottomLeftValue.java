@@ -9,10 +9,15 @@ public class FindBottomLeftValue {
         TreeNode node2 = new TreeNode(3);
 
         TreeNode node0 = new TreeNode(2, node1, node2);
-        System.out.println(q513s1(node0));
+
+        Q513 q513 = new Q513();
+        System.out.println(q513.solution1(node0));
     }
 
-    public static int q513s1(TreeNode root) {
+}
+
+class Q513 {
+    public int solution1(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         int result = 0;
         if (root != null)

@@ -11,11 +11,14 @@ public class BinaryTreePaths {
         TreeNode node2 = new TreeNode(3);
 
         TreeNode node0 = new TreeNode(1, node1, node2);
-        System.out.println(q257s1(node0));
+        Q257 q257 = new Q257();
+        System.out.println(q257.solution1(node0));
     }
 
+}
 
-    public static List<String> q257s1(TreeNode root) {
+class Q257 {
+    public List<String> solution1(TreeNode root) {
         List<String> result = new ArrayList<>();
         List<Integer> paths = new ArrayList<>();
         traversal(root, paths, result);
@@ -23,7 +26,7 @@ public class BinaryTreePaths {
     }
 
     // 这题要用前序遍历，让路径中父节点指向子节点
-    public static void traversal(TreeNode root, List<Integer> paths, List<String> result) {
+    public void traversal(TreeNode root, List<Integer> paths, List<String> result) {
         // 中
         // 这题的 中 要写在终止条件的前面，因为终止条件的时候直接返回了，叶子节点还没有加入path里
         paths.add(root.val);
@@ -60,4 +63,5 @@ public class BinaryTreePaths {
             paths.remove(paths.size() - 1);
         }
     }
+
 }

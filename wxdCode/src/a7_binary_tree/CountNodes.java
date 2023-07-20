@@ -13,10 +13,15 @@ public class CountNodes {
         TreeNode node2 = new TreeNode(3, node5, null);
 
         TreeNode node0 = new TreeNode(1, node1, node2);
-        System.out.println(q222s1(node0));
+
+        Q222 q222 = new Q222();
+        System.out.println(q222.solution1(node0));
     }
 
-    public static int q222s1(TreeNode root) {
+}
+
+class Q222 {
+    public int solution1(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         int result = 0;
         if (root != null)
