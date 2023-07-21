@@ -19,11 +19,16 @@ public class HasPathSum {
 
         TreeNode node0 = new TreeNode(5, node1, node2);
 
-        System.out.println(q113s1(node0, 22));
+        Q113 q113 = new Q113();
+        System.out.println(q113.solution1(node0, 22));
     }
 
+
+}
+
+class Q112 {
     // 根据BinaryTreePaths改的
-    public static boolean q112s1(TreeNode root, int targetSum) {
+    public boolean solution1(TreeNode root, int targetSum) {
         List<Integer> paths = new ArrayList<>();
         List<Integer> sums = new ArrayList<>();
         traversal112(root, paths, sums);
@@ -34,7 +39,7 @@ public class HasPathSum {
         return false;
     }
 
-    public static void traversal112(TreeNode root, List<Integer> paths, List<Integer> sums) {
+    public void traversal112(TreeNode root, List<Integer> paths, List<Integer> sums) {
         if (root == null)
             return;
         // 中
@@ -61,7 +66,7 @@ public class HasPathSum {
         }
     }
 
-    public static boolean q112s2(TreeNode root, int targetSum) {
+    public boolean solution2(TreeNode root, int targetSum) {
         if (root == null)
             return false;
         targetSum -= root.val;
@@ -71,25 +76,27 @@ public class HasPathSum {
         }
         // 左
         if (root.left != null) {
-            if (q112s2(root.left, targetSum))
+            if (solution2(root.left, targetSum))
                 return true;
         }
         // 右
         if (root.right != null) {
-            if (q112s2(root.right, targetSum))
+            if (solution2(root.right, targetSum))
                 return true;
         }
         return false;
     }
+}
 
-    public static List<List<Integer>> q113s1(TreeNode root, int targetSum) {
+class Q113 {
+    public List<List<Integer>> solution1(TreeNode root, int targetSum) {
         List<List<Integer>> results = new ArrayList<>();
         List<Integer> paths = new ArrayList<>();
-        traversal113(root, paths, targetSum, results);
+        traversal(root, paths, targetSum, results);
         return results;
     }
 
-    public static void traversal113(TreeNode root, List<Integer> path, int target, List<List<Integer>> results) {
+    public void traversal(TreeNode root, List<Integer> path, int target, List<List<Integer>> results) {
         if (root == null)
             return;
         // 中
@@ -106,15 +113,16 @@ public class HasPathSum {
         }
         // 左
         if (root.left != null) {
-            traversal113(root.left, path, target, results);
+            traversal(root.left, path, target, results);
             // 回溯
             path.remove(path.size() - 1);
         }
         // 右
         if (root.right != null) {
-            traversal113(root.right, path, target, results);
+            traversal(root.right, path, target, results);
             // 回溯
             path.remove(path.size() - 1);
         }
     }
+
 }
